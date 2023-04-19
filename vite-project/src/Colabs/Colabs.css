@@ -1,0 +1,17 @@
+
+.textColabs{
+    text-align: center;
+    color:#fff
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    color: #ffffff;
+    text-shadow: 0px 0px 10px #fff, 0px 0px 20px #fff, 0px 0px 30px #fff, 0px 0px 40px #11f7d0, 0px 0px 70px #11f7d0, 0px 0px 80px #11f7d0, 0px 0px 100px #11f7d0, 0px 0px 150px #11f7d0;
+  }
+  .container{
+    background-color: black;
+  }
+  

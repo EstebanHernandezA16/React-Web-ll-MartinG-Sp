@@ -1,5 +1,5 @@
 import React from "react";
-import { Menu } from "../shared/Menu/Menu";
+
 import { History } from "../History/History";
 
 
@@ -8,7 +8,7 @@ const banner ="https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.co
 
     return(
         <>
-        <Menu />
+        
         <h1 style={{backgroundColor: "gray"}}>Build Home</h1>
         <img style={{width:'100%',height:'600px'}} src={banner} alt="banner" />
         <section>
