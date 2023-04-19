@@ -3,12 +3,20 @@ import { Route, Routes, Link } from "react-router-dom";
 import "./Menu.css";
 
 function Menu() {
+  const logoMG =
+    "https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/logo.png?alt=media&token=b1ad3ea6-0a63-4a39-8bbb-4a9dd1ad4338";
+  const logoSptfy="https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/logoSpotify.png?alt=media&token=33bff431-8c6e-4cd9-bab9-9e37f6f7b704";  
+
   return (
     <>
-      <nav className="navbar navbar-expand-lg menu navbar-dark">
+      <nav className="navbar navbar-expand-lg menu navbar-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            Martin el garrixto
+          <a className="navbar-brand ">
+            <img
+              src={logoMG}
+              alt="logo"
+              style={{ width: "60px", height: "40px" }}
+            />
           </a>
           <button
             className="navbar-toggler"
@@ -24,22 +32,26 @@ function Menu() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link to="/" className="nav-link">
+                <Link to="/" className="nav-link txtMenu">
                   Inicio
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/colabs" className="nav-link">
-                  Colaboraciones
+                <Link to="/about" className="nav-link txtMenu">
+                  Acerca de sus Hits
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link txtMenu" href="#">
                   Pricing
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link disabled">Disabled</a>
+            </ul>
+            <ul className="navbar-nav ms-auto">  
+              <li className="nav-item ">
+                <Link className="nav-link txtMenu" to="/api">
+                  <img className="latido" src={logoSptfy} style={{ width: "30px", height: "30px" }} alt="" />
+                </Link>
               </li>
             </ul>
           </div>

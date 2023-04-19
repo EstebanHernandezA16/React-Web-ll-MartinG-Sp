@@ -1,3 +1,31 @@
 .menu{
-    background-color: rgb(0, 174, 255);
+    background-color: #090D0E;
+    
+    width: auto;
+    background: url('https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/Ecualizador.gif?alt=media&token=29d402aa-7fcc-40c0-b3a8-f5fba38688a1') no-repeat bottom center;
+    background-size: 100%;
+}
+.txtMenu{
+    color: aliceblue;
+}
+.latido:hover{
+    animation: pulso 1s ease-in-out infinite;
+}
+
+@keyframes pulso{
+    0%{
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(1.3);
+    }
+    50%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1);
+    }
 }

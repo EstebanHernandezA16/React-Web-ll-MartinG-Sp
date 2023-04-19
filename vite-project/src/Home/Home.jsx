@@ -9,9 +9,9 @@ const banner ="https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.co
     return(
         <>
         
-        <h1 style={{backgroundColor: "gray"}}>Build Home</h1>
+        {/* <h1 style={{backgroundColor: "gray"}}>Welcome</h1> */}
         <img style={{width:'100%',height:'600px'}} src={banner} alt="banner" />
-        <section>
+        <section style={{backgroundColor: "#090D0E"}}>
             <History/>
         </section>
         </>
