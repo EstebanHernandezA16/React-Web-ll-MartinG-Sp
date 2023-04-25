@@ -7,7 +7,7 @@ const col01 = "https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.co
 
     return(
         <Fragment>
-            <div className="container">
+            <div  className="container">
                 <div className="row david">
                     <div className="col-8 col-md-8 ">
                         <h1>With David Guetta</h1>
@@ -18,6 +18,7 @@ const col01 = "https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.co
                     </div>
                 </div>
             </div>
+            
         </Fragment>
 
     );

@@ -1,0 +1,41 @@
+.ElectroEffect{
+    align-items: center;
+    background-color: #090D0E;
+
+}
+
+#bannerHome{
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    
+    background-color: #090D0E;
+    box-shadow: 0 0 10px #00ebef, 0 0 20px, 0 0 30px #00ebef, 0 0 40px #00ebef;
+    animation: efecto-neon 7s ease-in-out infinite;
+}
+/*Otros colores: #e22b5c rojo, #ffa500 naranja, #2b7de2 azul#1,#0067dc azul#2 , azure blanco*/
+
+@keyframes efecto-neon {
+    0%{
+        box-shadow: 0 0 10px #00ebef, 0 0 20px, 0 0 30px #00ebef, 0 0 40px #00ebef; 
+    }
+
+    25%{
+        box-shadow: 0 0 10px #9400d3, 0 0 20px, 0 0 30px #9400d3, 0 0 40px #9400d3;
+    }
+    50%{
+        box-shadow: 0 0 10px #e22b5c, 0 0 20px, 0 0 30px #e22b5c, 0 0 40px #e22b5c;
+        
+    }
+    75%{
+        box-shadow: 0 0 10px #0067dc, 0 0 20px, 0 0 30px #0067dc, 0 0 40px #0067dc;
+    }
+   
+    100%{
+        box-shadow: 0 0 10px #00ebef, 0 0 20px, 0 0 30px #00ebef, 0 0 40px #00ebef;
+    }
+}

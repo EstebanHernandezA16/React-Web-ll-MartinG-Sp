@@ -1,5 +1,6 @@
 import React from "react";
 import "./History.css";
+//import { Footer } from "../shared/Footer/Footer";
 
 export function History() {
   const img1 =
@@ -11,6 +12,7 @@ export function History() {
 
   return (
     <>
+    <div style={{height: '1000px'}}>
       <div className="container">
         <div className="row">
           <div className="col-4 col-md-4">
@@ -26,19 +28,15 @@ export function History() {
               <img className="card-img-top" src={img1} alt="Card image cap" />
               <div className="card-body">
                 <h3
-                  class="card-title"
+                  className="card-title"
                   style={{ textAlign: "center", paddingBottom: "25px" }}
                 >
                   Martin Garrix
                 </h3>
+                
                 <p className="card-text" style={{ textAlign: "center" }}>
-                  Martijn Gerard Garritsen (/gæɹɪks/; Amstelveen, 14 de mayo de
-                  1996), 12 más conocido como Martin Garrix, es un DJ y
-                  productor neerlandés fundador del sello STMPD RCRDS.
-                  Actualmente ocupa el puesto #1 en la encuesta realizada en
-                  2022 por la revista DJ Magazine. También es conocido por sus
-                  seudónimos "Ytram" y "GRX".
-                </p>
+                Martijn Gerard Garritsen (Born 14 May 1996), known professionally as Martin Garrix and also as Ytram and GRX, is a Dutch DJ and record producer who was ranked number one on DJ Mag's Top 100 DJs list for three consecutive years 2016, 2017, and 2018.
+                Garrix has performed at music festivals such as Coachella, Electric Daisy Carnival, Ultra Music Festival, Tomorrowland, and Creamfields. </p>
               </div>
             </div>
           </div>
@@ -61,18 +59,14 @@ export function History() {
               <img className="card-img-top" src={img2} alt="Card image cap" />
               <div className="card-body" style={{ backgroundColor: "#090D0E" }}>
                 <h3
-                  class="card-title"
+                  className="card-title"
                   style={{ textAlign: "center", paddingBottom: "25px" }}
                 >
-                  Origenes
+                  Origns
                 </h3>
                 <p className="card-text" style={{ textAlign: "center" }}>
-                  Ingresó a la encuesta anual Top 100 DJ's realizada por la
-                  revista DJ Magazine, directamente al puesto 40. En 2014,
-                  obtuvo el 4°puesto y en 2015 fue nombrado 3º. En 2016, 2017,
-                  2018 y 2022 fue elegido por la revista como mejor DJ del
-                  mundo, colocándolo en el puesto número 1. 3​ En 2019 descendió
-                  al segundo puesto y en 2020 al tercero.
+                Garrix was born as Martijn Gerard Garritsen on 14 May 1996 in Amstelveen, the son of Gerard and Karin Garritsen. He has a younger sister named Laura. He showed musical interest at an early age and learned to play the guitar at the age of 8.
+                In 2004, he expressed interest in becoming a DJ after seeing Dutch DJ Tiësto perform at that year's Summer Olympics Opening Ceremony in Athens.
                 </p>
               </div>
             </div>
@@ -99,23 +93,23 @@ export function History() {
               <img className="card-img-top" src={img3} alt="Card image cap" />
               <div className="card-body" style={{ backgroundColor: "#090D0E" }}>
                 <h3
-                  class="card-title"
-                  style={{ textAlign: "center", paddingBottom: "25px" }}
+                  className="card-title"
+                  style={{ textAlign: "center", paddingBottom: "10px" }}
                 >
                   ¿One Hit? I DONT THINK SOO
                 </h3>
-                <p className="card-text" style={{ textAlign: "center" }}>
-                  Su éxito comenzó con el lanzamiento de la canción "Animals",
-                  el 17 de junio de 2013 por la discográfica Spinnin' Records.
-                  La canción alcanzó el puesto #1 en Bélgica y en Reino Unido, y
-                  el puesto #3 en Irlanda. El sencillo Wizard, producido con Jay
-                  Hardway, también fue un éxito en numerosos países en 2013.
+                <p className="card-text" style={{ textAlign: "center"  }}>
+                "Animals" is a big room house instrumental by Dutch DJ and record producer Martin Garrix, released as a digital download on 17 June 2013 on iTunes. The song quickly became popular within the EDM culture, leading to Garrix becoming the youngest producer to ever have a song reach number one on the electronic music store Beatport. The track was a commercial success.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
+      </div>
+      
+      
+
     </>
   );
 }

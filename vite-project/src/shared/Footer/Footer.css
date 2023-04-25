@@ -1,0 +1,32 @@
+#containerFooter{
+    
+    background-color: #090D0E;
+    position: relative;
+    width: 90%;
+    margin-left: 5%;
+    padding-top: 1%;
+
+
+    /* padding-top: 1%;
+     width: 95%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    height: 300px; */    
+}
+.Icons{
+   width: 50px;
+   height: 30px; 
+}
+#colName{
+    font-size: 13px;
+}
+
+#fila{
+margin-top: 5%;
+}
+.logo{
+    width: 60px;
+    height: 40px;
+    margin: 5px;
+    margin-top: 20px;
+}
