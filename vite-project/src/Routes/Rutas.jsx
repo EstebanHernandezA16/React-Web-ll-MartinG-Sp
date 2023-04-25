@@ -8,14 +8,18 @@ import { Footer } from "../shared/Footer/Footer";
 export const Rutas = () => {
   return (
     <Fragment>
+      <div style={{backgroundColor: '#090D0E'}}>
+
       <Menu />
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
       </Routes>
+
       <div style={{ width: '100%', height: '300px', backgroundColor: '#090D0E'}}>
       <Footer/>
+      </div>
       </div>
     </Fragment>
   );

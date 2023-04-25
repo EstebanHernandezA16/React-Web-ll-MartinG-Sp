@@ -4,12 +4,27 @@
     color:#fff
 
 }
+.img-colabs{
+  width: 75%;
+  margin: 5%;
+  margin-left: 15%;
+}
+/*#fbee00*/
+#david{
+  text-shadow: 0px 0px 10px #00fb0d, 0px 0px 20px #00fb0d, 0px 0px 30px #00fb0d, 0px 0px 40px #00fb0d, 0px 0px 40px #00fb0d, 0px 0px 80px #00fb0d, 0px 0px 80px #00fb0d, 0px 0px 100px #00fb0d;
+}
+#Tiësto{
+  text-shadow: 0px 0px 10px #fbee00, 0px 0px 20px #fbee00, 0px 0px 30px #fbee00, 0px 0px 40px #fbee00, 0px 0px 40px #fbee00, 0px 0px 80px #fbee00, 0px 0px 80px #fbee00, 0px 0px 100px #fbee00;
 
+}
+#Afrojack{
+  text-shadow: 0px 0px 10px #f20b0b, 0px 0px 20px #f20b0b, 0px 0px 30px #f20b0b, 0px 0px 40px #f20b0b, 0px 0px 40px #f20b0b, 0px 0px 80px #f20b0b, 0px 0px 80px #f20b0b, 0px 0px 100px #f20b0b;
+}
 h1 {
     text-align: center;
     font-size: 60px;
-    color: #ffffff;
-    text-shadow: 0px 0px 10px #fff, 0px 0px 20px #fff, 0px 0px 30px #fff, 0px 0px 40px #11f7d0, 0px 0px 70px #11f7d0, 0px 0px 80px #11f7d0, 0px 0px 100px #11f7d0, 0px 0px 150px #11f7d0;
+    color: #ffffff; 
+    
   }
   .container{
     background-color: black;

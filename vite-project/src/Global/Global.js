@@ -5,5 +5,6 @@ const logoSptfy="https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.
 const banner ="https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/banner.jpg?alt=media&token=32609249-b25a-4c9e-b3a3-5d231f57fae7"
 const logoPers="https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/logoPersonal.jpg?alt=media&token=fd6d5493-b3e5-4373-bbca-647a68f1b3ce" 
 const IconoCuernos= "https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/IconoCuernos.png?alt=media&token=505d13ee-a73b-4476-af10-9a681ce4d840"
+const col01 = "https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/Col01.jpg?alt=media&token=575b762d-aa00-4e45-815c-dfc0317dfbfb"
 
-export {logoMG, logoSptfy, banner, logoPers, IconoCuernos}
+export {logoMG, logoSptfy, banner, logoPers, IconoCuernos, col01}
