@@ -4,7 +4,7 @@ import { Home } from "../Home/Home";
 import { About } from "../About/About";
 import { Menu } from "../shared/Menu/Menu";
 import { Footer } from "../shared/Footer/Footer";
-
+// <Route path="/api" element={<Api/>}/>
 export const Rutas = () => {
   return (
     <Fragment>
@@ -15,6 +15,7 @@ export const Rutas = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+       
       </Routes>
 
       <div style={{ width: '100%', height: '300px', backgroundColor: '#090D0E'}}>
