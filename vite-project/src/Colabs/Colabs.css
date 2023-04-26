@@ -10,15 +10,27 @@
   margin-left: 15%;
 }
 /*#fbee00*/
-#david{
+#David{
   text-shadow: 0px 0px 10px #00fb0d, 0px 0px 20px #00fb0d, 0px 0px 30px #00fb0d, 0px 0px 40px #00fb0d, 0px 0px 40px #00fb0d, 0px 0px 80px #00fb0d, 0px 0px 80px #00fb0d, 0px 0px 100px #00fb0d;
+}
+#1{
+  text-shadow: 0px 0px 10px #00fb0d, 0px 0px 20px #00fb0d, 0px 0px 30px #00fb0d, 0px 0px 40px #00fb0d, 0px 0px 40px #00fb0d, 0px 0px 80px #00fb0d, 0px 0px 80px #00fb0d, 0px 0px 100px #00fb0d;
+
 }
 #Tiësto{
   text-shadow: 0px 0px 10px #fbee00, 0px 0px 20px #fbee00, 0px 0px 30px #fbee00, 0px 0px 40px #fbee00, 0px 0px 40px #fbee00, 0px 0px 80px #fbee00, 0px 0px 80px #fbee00, 0px 0px 100px #fbee00;
 
 }
+#2{
+  text-shadow: 0px 0px 10px #fbee00, 0px 0px 20px #fbee00, 0px 0px 30px #fbee00, 0px 0px 40px #fbee00, 0px 0px 40px #fbee00, 0px 0px 80px #fbee00, 0px 0px 80px #fbee00, 0px 0px 100px #fbee00;
+
+}
 #Afrojack{
   text-shadow: 0px 0px 10px #f20b0b, 0px 0px 20px #f20b0b, 0px 0px 30px #f20b0b, 0px 0px 40px #f20b0b, 0px 0px 40px #f20b0b, 0px 0px 80px #f20b0b, 0px 0px 80px #f20b0b, 0px 0px 100px #f20b0b;
+}
+#3{
+  text-shadow: 0px 0px 10px #f20b0b, 0px 0px 20px #f20b0b, 0px 0px 30px #f20b0b, 0px 0px 40px #f20b0b, 0px 0px 40px #f20b0b, 0px 0px 80px #f20b0b, 0px 0px 80px #f20b0b, 0px 0px 100px #f20b0b;
+
 }
 h1 {
     text-align: center;
