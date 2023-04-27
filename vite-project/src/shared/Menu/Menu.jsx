@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes, Link } from "react-router-dom";
 
 import "./Menu.css";
+import { Person } from "react-bootstrap-icons";
 
 function Menu() {
   const logoMG =
@@ -48,6 +49,7 @@ function Menu() {
                   Shop 
                 </Link>
               </li>
+              
               <li className="nav-item">
                 <a className="nav-link txtMenu nav-link disabled" href="#">
                   In molecular Building...🦠
@@ -58,6 +60,11 @@ function Menu() {
               <li className="nav-item ">
                 <Link className="nav-link txtMenu" to="/api">
                   <img className="latido" src={logoSptfy} style={{ width: "30px", height: "30px" }} alt="" />
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/form" className="nav-link txtMenu">
+                  <Person style={{ width: "30px", height: "30px" }}/>
                 </Link>
               </li>
             </ul>
