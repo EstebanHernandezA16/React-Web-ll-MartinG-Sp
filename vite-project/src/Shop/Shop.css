@@ -1,0 +1,51 @@
+.shop-container{
+    margin: 2%;
+    width: 95%;
+    height: 100%;
+    animation: expandir 1s ease-in-out;
+    background-color: black;
+}
+.card{
+    margin-top: 10%;
+    margin-left: 20%;
+    margin-bottom: 10%;
+    color: azure;
+   
+}
+.card-title{
+    text-align: center;
+}
+.btn{
+    margin-left: 82%;
+}
+.card-price{
+    margin-left: 40%;
+}
+
+@keyframes expandir {
+    0%{
+        transform: scale(0.00001);
+    }
+   100%{
+    transform: scale(1);
+   }
+   
+    /* 0% {
+      transform: scale(0);
+    }
+    40% {
+      transform: scale(1.1);
+    }
+    60% {
+      transform: scale(0.75);
+    }
+    75% {
+      transform: scale(1.08);
+    }
+    100% {
+      transform: scale(1);
+    } */
+  
+}
+
+

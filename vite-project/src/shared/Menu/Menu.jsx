@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes, Link } from "react-router-dom";
+
 import "./Menu.css";
 
 function Menu() {
@@ -40,6 +41,11 @@ function Menu() {
               <li className="nav-item">
                 <Link to="/about" className="nav-link txtMenu">
                   About Their Hits
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/shop" className="nav-link txtMenu">
+                  Shop 
                 </Link>
               </li>
               <li className="nav-item">

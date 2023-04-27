@@ -59,6 +59,12 @@ export const Members = () => {
       id: 3,
       id_css: "Afrojack",
     },
+    {
+      name:"Jay Hardway",
+      city:"Nimega (Netherlands)",
+      song:"Wizard",
+      
+    }
   ];
 
   // <h1>Ejemplo de {nombre}</h1>
@@ -124,6 +130,7 @@ export const Members = () => {
   return (
     <Fragment>
       <div className="container" style={{ marginTop: "30px" }}>
+        <H1>MIEMBROS BORRAR</H1>
         {collabs.map((collab) => {
           if (ite === 0 || ite % 2 === 0) {
             {

@@ -8,4 +8,10 @@ const IconoCuernos= "https://firebasestorage.googleapis.com/v0/b/musica-eha.apps
 const col01 = "https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/Col01.jpg?alt=media&token=575b762d-aa00-4e45-815c-dfc0317dfbfb"
 const col02 = "https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/Col02.jpg?alt=media&token=1053ae30-0d97-4e62-b246-10409a3896c4"
 const col03 = "https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/Col03.jpg?alt=media&token=eeca447a-e1f2-4de6-a1f2-111d9cc867ad"
-export {logoMG, logoSptfy, banner, logoPers, IconoCuernos, col01, col02, col03}
+const col04= "https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/Col04.jpg?alt=media&token=22cc9a6e-99ba-4307-8ac7-27a5be89f4cb"
+const Prod01 ="";
+const Prod02 = "";
+const Prod03 = "";
+const Prod04 = "";
+
+export {logoMG, logoSptfy, banner, logoPers, IconoCuernos, col01, col02, col03, col04}
