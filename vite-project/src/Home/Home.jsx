@@ -8,14 +8,17 @@ function Home() {
 
     return(
         <>
+        <div className="vanish">
         <div className="ElectroEffect">
         <img id="bannerHome"  src={banner} alt="banner" /> 
+        </div>
         </div>
         {/* <h1 style={{backgroundColor: "gray"}}>Welcome</h1> */}
         
         <section style={{backgroundColor: "#090D0E"}}>
             <History/>
         </section>
+        
         </>
     );
 }

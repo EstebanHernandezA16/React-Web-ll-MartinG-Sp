@@ -1,7 +1,10 @@
-import React, { Fragment, useEffect, useRef } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 import "./Shop.css";
+import { Cassette } from "react-bootstrap-icons";
 
 export const Shop = () => {
+
+  const[isPlaying, setIsPlaying] = useState(false);
   const products = [
     {
       id: 1,
@@ -9,6 +12,8 @@ export const Shop = () => {
       title: "Diamond Disk",
       desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi odit ullam quo doloremque excepturi! Error pariatur beatae id laboriosam rerum.",
       price: 29.99 + "$",
+      song:"Animals",
+      audio:""
     },
     {
       id: 2,
@@ -16,6 +21,9 @@ export const Shop = () => {
       title: "Emerald Disk",
       desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi odit ullam quo doloremque excepturi! Error pariatur beatae id laboriosam rerum.",
       price: 25.99 + "$",
+      song:"Virus",
+      audio:"",
+      
     },
     {
       id: 3,
@@ -23,6 +31,7 @@ export const Shop = () => {
       title: "Platinum Disk",
       desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi odit ullam quo doloremque excepturi! Error pariatur beatae id laboriosam rerum.",
       price: 19.99 + "$",
+      audio:""
     },
     {
       id: 4,
@@ -30,6 +39,7 @@ export const Shop = () => {
       title: "Golden Disk",
       desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi odit ullam quo doloremque excepturi! Error pariatur beatae id laboriosam rerum.",
       price: 14.99 + "$",
+      audio:""
     },
     {
       id: 5,
@@ -44,8 +54,17 @@ export const Shop = () => {
       title: "Bronze Disk",
       desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi odit ullam quo doloremque excepturi! Error pariatur beatae id laboriosam rerum.",
       price: 4.99 + "$",
+      audio: ""
     },
+    
   ];
+
+  const startAudio = (id) =>{
+    const audio = new Audio(products[id].audio);
+    isPlaying==true? (audio.pause() && setIsPlaying(false)): (audio.play() && setIsPlaying(true));
+    // audio.play()
+    // setIsPlaying(true)
+  }
 
   return (
     <Fragment>
@@ -55,7 +74,7 @@ export const Shop = () => {
         {products.map((product) => {
           return (
             
-              <div className="col-4  ">
+              <div key={product.id} className="col-4  ">
                 <div
                   className="card"
                   style={{ width: "19rem", backgroundColor: "#090D0E" }}
@@ -65,9 +84,17 @@ export const Shop = () => {
                     <h5 className="card-title">{product.title}</h5>
                     <p className="card-text">{product.desc}</p>
                     <h6 className="card-price">{product.price}</h6>
-                    <a href="#" className="btn btn-primary">
+                    {/* <a href="#" className="btn btn-primary btn-buy">
                       Buy
-                    </a>
+                    </a> */}{/*onClick={startAudio(product.id)}*/ }
+                    <button href="#" onClick={() =>{ startAudio(product.id), console.log("Escuchando "+product.song);}}  className="btn  btn-audio col-6">
+                    <Cassette size={16}/>
+                    </button>
+                    <button 
+                    className="btn  btn-buy col-6">
+                      Buy
+                    </button>
+
                   </div>
                 </div>
               </div>

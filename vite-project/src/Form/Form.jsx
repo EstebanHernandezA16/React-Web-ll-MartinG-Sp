@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { slide02 } from "../Global/Global";
 import "./Form.css";
 import {
@@ -10,19 +10,40 @@ import {
 } from "react-bootstrap-icons";
 
 export const Form = () => {
+
+  const [endAnimation, setEndAnimation] = useState(null);
+
+  useEffect(()=>{
+    const title =document.querySelector(".title-container");
+    title.addEventListener("animationend", nextAnimation);
+    return() =>{
+      title.removeEventListener("animationend", nextAnimation);
+    }
+  },[])
+
+  const nextAnimation = () =>[
+  setEndAnimation(true)
+  ]
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [nombre, setNombre] = useState("");
   const [hora, setHora] = useState("");
   const [date, setDate] = useState("");
+  
   return (
     <Fragment>
-      <div className="img-container ">
-        <h1 className="h1w mt-1">Sign Up</h1>
+      <div className="title-container">
+      <h1 className="h1w mt-1">Sign Up</h1>
+      </div>
+      
 
+      <div className="img-container ">
+        
+      {endAnimation && 
         <div className="loginScreen">
           {/* onSubmit={handleSubmit} */}
-          <form>
+          <form className="">
             <div className="row">
               <div className="col-12 py-4"></div>
             </div>
@@ -33,7 +54,7 @@ export const Form = () => {
                 </span>
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control txtbox"
                   placeholder="Ingresa tu correo"
                   aria-label="Recipient's username"
                   aria-describedby="basic-addon2"
@@ -53,7 +74,7 @@ export const Form = () => {
                 </span>
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control txtbox"
                   placeholder="Nombre"
                   aria-label="Username"
                   aria-describedby="basic-addon1"
@@ -67,7 +88,7 @@ export const Form = () => {
                 </span>
                 <input
                   type="password"
-                  className="form-control"
+                  className="form-control txtbox"
                   placeholder="Contraseña"
                   aria-label="Username"
                   aria-describedby="basic-addon1"
@@ -83,7 +104,7 @@ export const Form = () => {
                 </span>
                 <input
                   type="date"
-                  className="form-control"
+                  className="form-control txtbox"
                   placeholder="Dia"
                   aria-label="Username"
                   aria-describedby="basic-addon1"
@@ -99,7 +120,7 @@ export const Form = () => {
                 </span>
                 <input
                   type="time"
-                  className="form-control"
+                  className="form-control txtbox"
                   placeholder="Hora"
                   aria-label="Username"
                   aria-describedby="basic-addon1"
@@ -109,15 +130,17 @@ export const Form = () => {
               </div>
             </div>
             <div className="row">
-              <div className="col-12 py-4 btnIng">
-                <button type="submit"  className="btn btn-light">
+              <div className="col-12 py-4 btnIng ">
+                <button type="submit"  className="btn btn-light txtbox">
                   Join The Party
                 </button>
               </div>
             </div>
           </form>
         </div>
+         }
       </div>
+     
     </Fragment>
   );
 };

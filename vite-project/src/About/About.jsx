@@ -1,15 +1,24 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import {Colabs} from '../Colabs/Colabs'
 import { slide01, slide02, slide03 } from "../Global/Global";
 import './About.css'
+import WOW from 'wow.js'
+import 'animate.css'
+
 export const About = () => {
+
+  useEffect(()=>{
+    const wow = new WOW();
+    wow.init();
+  },[])
 
   return (
     <Fragment>
       <div
+
         style={{backgroundColor:'#090D0E'}}
         id="carouselExampleControls"
-        className="carousel slide"
+        className="carousel slide wow animate__animated animate__backInLeft"
         data-bs-ride="true"
       >
         <div className="carousel-inner">

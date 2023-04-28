@@ -8,6 +8,7 @@
     align-items: center;
     width: 80%;
     height: 80%;
+    height: 670px;
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 2%;
@@ -16,8 +17,35 @@
     background-color: #090D0E;
     box-shadow: 0 0 10px #00ebef, 0 0 20px, 0 0 30px #00ebef, 0 0 40px #00ebef;
     animation: efecto-neon 7s ease-in-out infinite;
+    
+}
+.vanish{
+    animation: vanish 2s ease-in-out;
+    height: 750px;
 }
 /*Otros colores: #e22b5c rojo, #ffa500 naranja, #2b7de2 azul#1,#0067dc azul#2 , azure blanco*/
+
+
+@keyframes vanish {
+    0%{
+        
+        opacity: 0%;
+    }
+    25%{
+        
+        opacity: 10%;
+    }
+    50%{
+        opacity: 40%;
+    }
+    75%{
+        opacity: 60%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
 
 @keyframes efecto-neon {
     0%{

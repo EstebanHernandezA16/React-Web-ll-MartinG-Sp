@@ -15,11 +15,27 @@
 .card-title{
     text-align: center;
 }
-.btn{
-    margin-left: 82%;
+.btn-buy{
+ background-color: rgba(71, 30, 255, 0.892);
+ box-shadow: 0px 0px 10px #0067dc, 0px 0px 20px #0067dc, 0px 0px 30px #0067dc, 0px 0px 30px #0067dc, 0px 0px 40px #0067dc, 0px 0px 20px #0067dc, 0px 0px 0px #0067dc, 0px 0px 0px #0067dc;
+  margin: 5%;
+  margin-left: 43%;
+  
+}
+.btn-audio{
+  
+  /* background-color: #f12323;
+  box-shadow: 0px 0px 10px #f20b0b, 0px 0px 20px #f20b0b, 0px 0px 30px #f20b0b, 0px 0px 30px #f20b0b, 0px 0px 40px #f20b0b, 0px 0px 20px #f20b0b, 0px 0px 0px #f20b0b, 0px 0px 0px #f20b0b; */
+  background-color: #8a2be2;
+  box-shadow: 0px 0px 10px #9c33fe, 0px 0px 20px #9c33fe, 0px 0px 30px #9c33fe, 0px 0px 30px #9c33fe, 0px 0px 40px #9c33fe, 0px 0px 20px #9c33fe, 0px 0px 0px #9c33fe, 0px 0px 0px #9c33fe; 
+
+  bottom: 20px;
+  margin-left: 2%;
+  
 }
 .card-price{
     margin-left: 40%;
+   
 }
 
 @keyframes expandir {

@@ -6,6 +6,7 @@ import { Menu } from "../shared/Menu/Menu";
 import { Footer } from "../shared/Footer/Footer";
 import { Shop } from "../Shop/Shop";
 import { Form } from "../Form/Form";
+import { Quiz } from "../Delta/Quiz";
 //
 export const Rutas = () => {
   return (
@@ -19,6 +20,7 @@ export const Rutas = () => {
           {/* <Route path="/api" element={<Api/>}/> */}
           <Route path="/shop" element={<Shop />} />
           <Route path="/form" element={<Form/>} />
+          <Route path="/test" element={<Quiz/>}/>
         </Routes>
 
         <div

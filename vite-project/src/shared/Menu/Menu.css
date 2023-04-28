@@ -5,12 +5,21 @@
     
     background: url('https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/Ecualizador.gif?alt=media&token=29d402aa-7fcc-40c0-b3a8-f5fba38688a1') no-repeat bottom center;
     background-size: 100%;
+    
 }
 .txtMenu{
-    color: aliceblue;
+    color: rgb(255, 255, 255);
 }
 .latido:hover{
     animation: pulso 1s ease-in-out infinite;
+}
+.item{
+    background-color: rgb(29, 3, 54);
+    margin-left: 9px;
+    border-radius: 10%;
+    /* text-shadow: 0px 0px 10px #a500dc, 0px 0px 20px #a500dc, 0px 0px 30px #a500dc, 0px 0px 40px #a500dc, 0px 0px 40px #a500dc, 0px 0px 80px #a500dc, 0px 0px 80px #a500dc, 0px 0px 100px #a500dc; */
+    box-shadow: 0px 0px 5px #0067dc, 0px 0px 10px #0067dc, 0px 0px 10px #0067dc, 0px 0px 20px #0067dc, 0px 0px 20px #0067dc, 0px 0px 30px #0067dc, 0px 0px 40px #0067dc, 0px 0px 60px #0067dc;;
+    opacity: 0.5;
 }
 
 /* 1, 1.2 y 1.3 */

@@ -34,19 +34,24 @@ function Menu() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
-              <li className="nav-item">
+              <li className="nav-item item">
                 <Link to="/" className="nav-link txtMenu">
                   Home
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item item">
                 <Link to="/about" className="nav-link txtMenu">
                   About Their Hits
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item item">
                 <Link to="/shop" className="nav-link txtMenu">
                   Shop 
+                </Link>
+              </li>
+              <li className="nav-item item">
+                <Link to="/test" className="nav-link txtMenu">
+                  Quiz Game  
                 </Link>
               </li>
               
