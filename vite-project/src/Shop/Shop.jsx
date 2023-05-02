@@ -10,7 +10,7 @@ export const Shop = () => {
       id: 1,
       img: "",
       title: "Diamond Disk",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi odit ullam quo doloremque excepturi! Error pariatur beatae id laboriosam rerum.",
+      desc: "Survive to the best song of GRX off all the times",
       price: 29.99 + "$",
       song:"Animals",
       audio:""
@@ -31,7 +31,8 @@ export const Shop = () => {
       title: "Platinum Disk",
       desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi odit ullam quo doloremque excepturi! Error pariatur beatae id laboriosam rerum.",
       price: 19.99 + "$",
-      audio:""
+      song:"Oops",
+      audio:"",
     },
     {
       id: 4,
@@ -39,7 +40,8 @@ export const Shop = () => {
       title: "Golden Disk",
       desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi odit ullam quo doloremque excepturi! Error pariatur beatae id laboriosam rerum.",
       price: 14.99 + "$",
-      audio:""
+      song: "Turn Up The Speakers",
+      audio:"",
     },
     {
       id: 5,
@@ -47,6 +49,8 @@ export const Shop = () => {
       title: "Silver Disk",
       desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi odit ullam quo doloremque excepturi! Error pariatur beatae id laboriosam rerum.",
       price: 10.99 + "$",
+      song: "Wizard",
+      audio:"",
     },
     {
       id: 6,
@@ -54,7 +58,8 @@ export const Shop = () => {
       title: "Bronze Disk",
       desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi odit ullam quo doloremque excepturi! Error pariatur beatae id laboriosam rerum.",
       price: 4.99 + "$",
-      audio: ""
+      song: "Summer",
+      audio:"",
     },
     
   ];
