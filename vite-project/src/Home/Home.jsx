@@ -15,7 +15,7 @@ function Home() {
         </div>
         {/* <h1 style={{backgroundColor: "gray"}}>Welcome</h1> */}
         
-        <section style={{backgroundColor: "#090D0E"}}>
+        <section style={{backgroundColor: "#090D0E"}} >
             <History/>
         </section>
         

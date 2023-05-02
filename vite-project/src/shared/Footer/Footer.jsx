@@ -8,7 +8,7 @@ export const Footer = () => {
   return (
     <Fragment>
       <div id="containerFooter">
-        <div className="container">
+        <div className="container" style={{height:'240px'}}>
           <div className="container text-center" style={{marginTop: '5%', height: '220px'}} >
             <div className="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 rowFooter">
               <div className="col col-img">

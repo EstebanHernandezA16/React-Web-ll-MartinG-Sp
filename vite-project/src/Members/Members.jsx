@@ -129,14 +129,15 @@ export const Members = () => {
   //         })}
   return (
     <Fragment>
-      <div className="container" style={{ marginTop: "30px" }}>
-        <H1>MIEMBROS BORRAR</H1>
+      
+        <h1>MIEMBROS BORRAR</h1>
         {collabs.map((collab) => {
-          if (ite === 0 || ite % 2 === 0) {
+          if (ite == 0) {
             {
-              ite = ite + 1;
+              ite = ite +1;
             }
             return (
+              <div className="container" style={{ marginTop: "30px" }}>
               <div className="row" key={collab.id}>
                 <div className="col-8 col-md-8 ">
                   <h1 id={collab.id_css}>With {collab.name}</h1>
@@ -150,12 +151,14 @@ export const Members = () => {
                   />
                 </div>
               </div>
+              </div>
+              
             );
           } else {
             {
               ite = ite - 1;
             }
-            return (
+           
               <div className="row" key={collab.id}>
                 <div className="col-4 col-md-4">
                   <img
@@ -169,13 +172,13 @@ export const Members = () => {
                   <p className="textColabs">{collab.desc}</p>
                 </div>
               </div>
-            );
+            
             {
               ite = ite + 1;
             }
           }
         })}
-      </div>
+      
     </Fragment>
   );
 };

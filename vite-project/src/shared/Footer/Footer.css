@@ -2,9 +2,12 @@
     
     background-color: #090D0E;
     position: relative;
-    width: 90%;
-    margin-left: 5%;
+    width: 100%;
+    height: 100%;
+    /* margin-left: 5%; */
     padding-top: 1%;
+    
+   
 
 
     /* padding-top: 1%;

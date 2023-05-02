@@ -12,15 +12,16 @@ export function History() {
 
   return (
     <>
-      <div style={{ height: "1000px" }}>
-        <div className="container">
-          <div className="row">
+      <div style={{ height: "65rem" }}>
+        <div className="container" style={{height: '100%' }}>
+          <div className="row" >
             <div className="col-4 col-md-4">
               <div
                 className="card"
                 style={{
                   width: "20rem",
-                  paddingTop: "5px",
+                  height: '100%',
+                  marginTop: "5px",
                   backgroundColor: "#090D0E",
                   color: "white",
                 }}
@@ -57,7 +58,8 @@ export function History() {
                 className="card"
                 style={{
                   width: "20rem",
-                  paddingTop: "94px",
+                  marginTop: "82px",
+                  height: '90%',
                   backgroundColor: "black",
                   color: "white",
                 }}
@@ -99,7 +101,8 @@ export function History() {
                 className="card"
                 style={{
                   width: "20rem",
-                  paddingTop: "248px",
+                  height: '75%',
+                  marginTop: "235px",
                   backgroundColor: "black",
                   color: "white",
                 }}

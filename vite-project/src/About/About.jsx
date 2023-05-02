@@ -75,10 +75,10 @@ export const About = () => {
           <span className="visually-hidden">Siguiente</span>
         </button>
       </div>
-      <div style={{backgroundColor: '#090D0E'}}>
+      <section className="pre-colabs" style={{backgroundColor: '#090D0E', margin: '7%', backgroundSize: 'cover'}}>
       
       <Colabs/>
-      </div>
+      </section>
         
 
 

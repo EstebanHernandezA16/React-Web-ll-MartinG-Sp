@@ -48,5 +48,15 @@ h1 {
   }
   .container{
     background-color: black;
+    
+  }
+  .row{
+    padding-top: 1px;
+    margin-top: 5%;
+  }
+  .container{
+    margin: 7%;
+    
+    
   }
   
