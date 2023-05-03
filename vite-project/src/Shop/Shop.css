@@ -5,6 +5,20 @@
     animation: expandir 1s ease-in-out;
     background-color: black;
 }
+.icono{
+  /* align-items: center;
+  height: 50%;
+  width: 50%;
+  margin-left: 25%; */
+}
+#A{
+  height: 70%;
+  width: 100%;
+}
+#O{
+  width: 300px;
+  height: 300px;
+}
 .card{
     margin-top: 10%;
     margin-left: 20%;

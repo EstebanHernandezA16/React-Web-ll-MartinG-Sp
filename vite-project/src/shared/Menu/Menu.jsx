@@ -51,13 +51,13 @@ function Menu() {
               </li>
               <li className="nav-item item">
                 <Link to="/test" className="nav-link txtMenu">
-                  Quiz Game  
+                  Quiz
                 </Link>
               </li>
               
               <li className="nav-item">
                 <a className="nav-link txtMenu nav-link disabled" href="#">
-                  In molecular Building...🦠
+                  🦠
                 </a>
               </li>
             </ul>
