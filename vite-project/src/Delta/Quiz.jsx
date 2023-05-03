@@ -71,6 +71,7 @@ export const Quiz = () => {
     //Agregar lógica para verificar si la respuestas es correcta o no.
     console.log(respuestas);
     respuestas.map((respuesta,i)=>{
+        //Revisar la syntax para guardar los resultados en el state resultado
         
          respuestas[i]==quests[i].answer? (console.log('yes') && setResultado([i]=true)): (console.log('no') && setResultado([i]=false));
         return resultado
