@@ -85,7 +85,7 @@ export const Quiz = () => {
     <Fragment>
       <div className="container">
         <h2 className="title-main">Questions</h2>
-        <div className="row">
+        <div className="row rowQuiz">
 
         {quests.map((quest, index) => {
             return(

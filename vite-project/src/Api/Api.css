@@ -1,0 +1,27 @@
+.container-api{
+    width: 95%;
+
+    height: calc(100% + 5%);
+   
+    margin: 2.5%;
+    background-color: black;
+    background-size: cover;
+
+}
+.p-Api{
+    margin: 5%;
+    color: azure;
+    padding-bottom: 10%;
+}
+.p-Api-songName{
+    color: #7f1ce1;
+    margin-left: 40%;
+}
+.lastSong{
+    padding-bottom: 10%;
+}
+.h3-Api{
+    margin: 5%;
+    color: azure;
+    text-align: center;
+}

@@ -12,16 +12,19 @@ const col04= "https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com
 const slide01 ="https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/slide01.jpg?alt=media&token=c6b33a5a-1457-4856-abd2-0fd3b135d0d4";
 const slide02 ="https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/slide02.jpg?alt=media&token=adb48d59-e399-40e6-a98a-740e71ec550a";
 const slide03 ="https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/slide03.jpg?alt=media&token=bc5de9c6-928b-4e1b-9b8a-a3559c3357cd";
-const DiamondD = "https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/diamond%20Disk.png?alt=media&token=9bc1a8f7-3178-43cc-9b75-6f3412c2ad0e";
-const EmeraldD= "https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/emerald%20Disk.png?alt=media&token=7947dc09-d504-4da8-8966-b2d656887194";
-const PlatinumD="https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/Platinum%20Disk.png?alt=media&token=9ad020c9-890a-44a9-a7e1-e773d596a408";
-const GoldenD="https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/Gold%20Disk%20.png?alt=media&token=537e998d-0cc4-4986-81ff-033e4ab7dbf0";
-const SilverD="https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/Silver%20Disk.png?alt=media&token=11c6ad57-5e3f-4c4c-947d-32bd7f987cee";
-const CopperD="https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/Copper%20icon%20Disk.png?alt=media&token=0422e108-1fdb-433b-b531-12c13ce25db2";
+const DiamondD = "https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/dscX.png?alt=media&token=5539d583-711d-450d-ba5d-b455d00dae8f";
+const EmeraldD= "https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/dscC.png?alt=media&token=5f6c9ecb-de65-4994-9448-1ac53d418a55";
+const PlatinumD="https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/discW.png?alt=media&token=fadbaf3a-5470-4561-9be9-b9c3e510d143";
+const GoldenD="https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/dscG.png?alt=media&token=2e97e2ea-9258-4f8e-9e18-c97694e17861";
+const SilverD="https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/dscP.png?alt=media&token=4c4ab1c3-3f3c-46ec-b938-e8756559afb9";
+const CopperD="https://firebasestorage.googleapis.com/v0/b/musica-eha.appspot.com/o/dscR.png?alt=media&token=f80d15d3-5013-476d-a6d2-4fc8c2ff8cf9";
+const ClientId= "1dd45c0b218d416c8f107cdb14a2258d";
+const ClientL="9f18094f455c4b18b164a160209560dc";
+const GrxId="60d24wfXkVzDSfLS6hyCjZ";
 const DiamondM ="../../public/Audio/Animals-short.mp3";
 const EmeraldM ="../../public/Audio/Virus-short.mp3";
 const PlatinumM ="../../public/Audio/Oops-short.mp3"
 const GoldenM="../../public/Audio/Turn Up The Speakers- short.mp3"
 const SilverM="../../public/Audio/Wizard- short.mp3";
 const CopperM="../../public/Audio/Poison-short.mp3";
-export {logoMG, logoSptfy, banner, logoPers, IconoCuernos, col01, col02, col03, col04, slide01, slide02, slide03, DiamondD, EmeraldD, PlatinumD, GoldenD, SilverD, CopperD, DiamondM, EmeraldM, PlatinumM, GoldenM, SilverM, CopperM}
+export {logoMG, logoSptfy, banner, logoPers, IconoCuernos, col01, col02, col03, col04, slide01, slide02, slide03, DiamondD, EmeraldD, PlatinumD, GoldenD, SilverD, CopperD, DiamondM, EmeraldM, PlatinumM, GoldenM, SilverM, CopperM, ClientId ,GrxId,ClientL}

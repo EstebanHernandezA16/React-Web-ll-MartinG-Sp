@@ -1,5 +1,5 @@
 .container{
-    width: 90%;
+    width: 100%;
     
     margin: 5%;
     background-size: cover;
@@ -34,7 +34,7 @@ Silverton - #FF69B4 (un rosa fuerte)
     /* background-color: wheat; */
     margin-left: 0.0009%;
 }
-.row{
+.rowQuiz{
     /* margin: 10%;
     padding-bottom: 5%; */
     align-items: center;
