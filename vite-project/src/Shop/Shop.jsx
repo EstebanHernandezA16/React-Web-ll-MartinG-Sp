@@ -5,8 +5,8 @@ import { DiamondM, EmeraldM, PlatinumM, GoldenM, SilverM, CopperM } from "../Glo
 import { Cassette } from "react-bootstrap-icons";
 
 export const Shop = () => {
-
-  const[isPlaying, setIsPlaying] = useState(false);
+  const [audio, setAudio] = useState(null);
+  const[isPlaying, setIsPlaying] = useState(null);
   const products = [
     {
       id: 1,
@@ -74,8 +74,10 @@ export const Shop = () => {
 
   const startAudio = (id) =>{
     const audio = new Audio(products[id].audio);
-    isPlaying==true? (audio.pause(), setIsPlaying(false)): (audio.play(), setIsPlaying(true));
-    // audio.play()
+    isPlaying==true? (audio.current.pause()&& setIsPlaying(false) && setAudio(audio)): (audio.play()&& setIsPlaying(true));
+    if(isPlaying){
+    audio.current.pause();
+    }
     
   }
 
@@ -100,6 +102,7 @@ export const Shop = () => {
                     {/* <a href="#" className="btn btn-primary btn-buy">
                       Buy
                     </a> */}{/*onClick={startAudio(product.id)}*/ }
+                    
                     <button href="#" onClick={() =>{ startAudio(product.id), console.log("Escuchando "+product.song);}}  className="btn  btn-audio col-6">
                     <Cassette size={16}/>
                     </button>
@@ -107,6 +110,7 @@ export const Shop = () => {
                     className="btn  btn-buy col-6">
                       Buy
                     </button>
+                    
 
                   </div>
                 </div>

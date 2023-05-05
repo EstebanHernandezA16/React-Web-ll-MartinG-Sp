@@ -11,11 +11,11 @@
 .p-Api{
     margin: 5%;
     color: azure;
-    padding-bottom: 10%;
+    /* padding-bottom: 2%; */
 }
 .p-Api-songName{
     color: #7f1ce1;
-    margin-left: 40%;
+    
 }
 .lastSong{
     padding-bottom: 10%;
@@ -24,4 +24,16 @@
     margin: 5%;
     color: azure;
     text-align: center;
+}
+.col-4-Api{
+    margin: 5%;
+    align-items: center;
+    text-align: center;
+}
+.info-text{
+    color: azure;
+    text-align: center;
+}
+.row-Api{
+    top: 20%;
 }
