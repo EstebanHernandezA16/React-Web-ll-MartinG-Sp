@@ -7,6 +7,7 @@ import { Cassette } from "react-bootstrap-icons";
 export const Shop = () => {
   const [audio, setAudio] = useState(null);
   const[isPlaying, setIsPlaying] = useState(null);
+  
   const products = [
     {
       id: 1,
@@ -81,6 +82,10 @@ export const Shop = () => {
     
   }
 
+  const eventoClase = (evento) =>{
+    console.log(evento.target.classList.add('prueba'));
+  }
+
   return (
     <Fragment>
       <div className="shop-container">
@@ -94,7 +99,7 @@ export const Shop = () => {
                   className="card"
                   style={{ width: "19rem", backgroundColor: "#090D0E" }}
                 >
-                  <img id={product.id_css} src={product.img} className="card-img-top img-fluid icono" alt="..." />
+                  <img id={product.id_css} src={product.img} onMouseOver={eventoClase} className="card-img-top img-fluid icono" alt="..." />
                   <div className="card-body">
                     <h5 className="card-title">{product.title}</h5>
                     <p className="card-text">{product.desc}</p>

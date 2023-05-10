@@ -9,6 +9,8 @@ import { Form } from "../Form/Form";
 import { Quiz } from "../Delta/Quiz";
 import { Members } from "../Members/Members";
 import { Api } from "../Api/Api";
+import { Prueba } from "../Hooks/Prueba";
+import { Loading } from "../Hooks/Loading";
 //
 export const Rutas = () => {
   return (
@@ -26,6 +28,9 @@ export const Rutas = () => {
           <Route path="/form" element={<Form/>} />
           <Route path="/test" element={<Quiz/>}/>
           <Route path="/m" element ={<Members/>}/>
+          <Route path="/prueba" element ={<Prueba/>}/>
+          <Route path="/loading" element ={<Loading/>}/>
+
         </Routes>
         </div>
        {/* height: "95%", marginTop: '5%', */}
