@@ -11,7 +11,10 @@ import { Members } from "../Members/Members";
 import { Api } from "../Api/Api";
 import { Prueba } from "../Hooks/Prueba";
 import { Loading } from "../Hooks/Loading";
-//
+import { Login } from "../Login/Login";
+import Swal from "sweetalert2";
+
+
 export const Rutas = () => {
   return (
     <Fragment>
@@ -30,6 +33,7 @@ export const Rutas = () => {
           <Route path="/m" element ={<Members/>}/>
           <Route path="/prueba" element ={<Prueba/>}/>
           <Route path="/loading" element ={<Loading/>}/>
+          <Route path="/l" element ={<Login/>}/>
 
         </Routes>
         </div>

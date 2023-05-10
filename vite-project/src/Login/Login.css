@@ -1,0 +1,113 @@
+.h1w{
+    z-index: 0;
+  /* text-shadow: 0px 0px 10px #a500dc, 0px 0px 20px #a500dc, 0px 0px 30px #a500dc, 0px 0px 40px #a500dc, 0px 0px 40px #a500dc, 0px 0px 80px #a500dc, 0px 0px 80px #a500dc, 0px 0px 100px #0067dc; */
+  text-shadow: 0px 0px 10px #a500dc, 0px 0px 20px #a500dc, 0px 0px 30px #a500dc, 0px 0px 40px #a500dc, 0px 0px 40px #a500dc, 0px 0px 80px #0067dc, 0px 0px 80px #0067dc, 0px 0px 100px #0067dc;
+}
+.img-container{
+    width: 95%;
+    height: 90%;
+    height: 400px;
+    margin: 2%;
+    margin-top: 5%;
+    z-index: 0;
+    /*  animation: expandir-form 2s ease-in-out; */
+    /*Desmarcar si se necesita  que el marco de neon tenga la animacion tambien*/
+
+    border:  2px solid #090D0E;
+    border-radius: 10px;
+    /* box-shadow: 0 0 10px #a500dc, 0 0 20px #a500dc, 0 0 20px #a500dc, 0 0 20px #a500dc, 0 0 20px #a500dc, 0 0 20px #a500dc, 0 0 20px #a500dc, 0 0 20px #0067dc; */
+    
+    box-shadow: 0px 0px 10px #00ebef, 0px 0px 20px #00ebef, 0px 0px 20px #00ebef, 0px 0px 30px #00ebef, 0px 0px 30px #00ebef, 0px 0px 50px #a500dc, 0px 0px 50px #0067dc, 0px 0px 60px #0067dc;;
+   
+}
+.txtbox{
+    background-color: #090D0E;
+    color: whitesmoke;
+}
+.title-container{
+    width: 95%;
+    height: 100px;
+    margin: 2%;
+    animation: expandir 1s ease-in-out;
+    
+}
+
+
+@keyframes expandir {
+    0%{
+        transform: scale(0.00001);
+    }
+   100%{
+    transform: scale(1);
+   }
+   
+   
+  
+}
+
+
+@keyframes expandir-form {
+    0% {
+        transform: scale(0);
+      }
+      40% {
+        transform: scale(1.1);
+      }
+      60% {
+        transform: scale(0.75);
+      }
+      75% {
+        transform: scale(1.08);
+      }
+      100% {
+        transform: scale(1);
+      }
+}
+
+.title-container:animationed + .img-container{
+    animation: expandir-form 2s ease-in-out;
+}
+
+
+/* .form-control{
+    color: azure;
+    background-color: #1e1e1e;
+   
+}
+.txt-box{
+    background-color: #1e1e1e;
+} */
+.loginScreen{
+    
+    width: 700px;
+    opacity: 0.6;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 23%;
+    padding: 50px 100px; 
+    position: absolute;
+    /* top: 20%;
+    bottom: 20%; */
+    animation: expandir-form 2s ease-in-out;
+    height: 45%;
+  
+    
+    
+  
+    
+      
+  }
+  /* *{
+      font-family: "Copperplate Gothic Bold", sans-serif;
+  } */
+  
+  
+  .btnIng{
+      margin-left: -6%;
+     
+  }
+  .btn{
+    width: 25%;
+  }

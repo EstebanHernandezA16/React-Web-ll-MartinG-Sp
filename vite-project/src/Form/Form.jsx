@@ -21,6 +21,13 @@ export const Form = () => {
     }
   },[])
 
+
+
+
+  const Validar = () =>{
+
+  }
+
   const nextAnimation = () =>[
   setEndAnimation(true)
   ]
@@ -42,8 +49,8 @@ export const Form = () => {
         
       {endAnimation && 
         <div className="loginScreen">
-          {/* onSubmit={handleSubmit} */}
-          <form className="">
+         
+          <form  className="">
             <div className="row">
               <div className="col-12 py-4"></div>
             </div>
@@ -63,12 +70,12 @@ export const Form = () => {
                 />
 
                 <span className="input-group-text txtbox  " id="basic-addon2">
-                  @mail.com
+                  @gmail.com
                 </span>
               </div>
             </div>
             <div className="row">
-              <div className="col input-group mb-3">
+              {/* <div className="col input-group mb-3">
                 <span className="input-group-text txtbox" id="basic-addon1">
                   <PersonSquare />
                 </span>
@@ -81,7 +88,7 @@ export const Form = () => {
                   value={nombre}
                   onChange={(e) => setNombre(e.target.value)}
                 />
-              </div>
+              </div> */}
               <div className="col input-group mb-3">
                 <span className="input-group-text txtbox" id="basic-addon1">
                   <Lock />
@@ -97,7 +104,7 @@ export const Form = () => {
                 />
               </div>
             </div>
-            <div className="row">
+            {/* <div className="row">
               <div className="col input-group mb-3">
                 <span className="input-group-text txtbox" id="basic-addon1">
                   <CalendarDay />
@@ -128,11 +135,11 @@ export const Form = () => {
                   onChange={(e) => setHora(e.target.value.toString())}
                 />
               </div>
-            </div>
+            </div> */}
             <div className="row">
               <div className="col-12 py-4 btnIng ">
                 <button type="submit"  className="btn btn-light txtbox">
-                  Join The Party
+                 Login
                 </button>
               </div>
             </div>
