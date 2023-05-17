@@ -82,7 +82,7 @@ export const Api = () => {
               <>
                 {i == songs.length - 1 ? (
                   <>
-                    <div className="col-4 col-4-Api lastSong">
+                    <div key={song.id} className="col-4 col-4-Api lastSong">
                       {/* <h3 className="h3-Api" style={{marginBottom: '20%'}}> And the last song its</h3> */}
                       <p className="p-Api-songName " key={song.id}>
                         {" "}
@@ -117,9 +117,12 @@ export const Api = () => {
               <img src={song.album.images[0].url} alt="" width={song.album.images[1].width} height={song.album.images[1].height} style={{margin: '0,2%', marginLeft: '35%'}} />
               {song.preview_url? <><iframe src={song.preview_url} style={{width: '100%', marginLeft: '17.5%'}}></iframe> </> :<><p className="info-text">{`${song.name} no cuenta con vista previa`}</p></>}
               </div> */}
-                    <div className="card" style={{ width: "18rem", backgroundColor: 'black' }}>
-                    <img
-                     className="card-img-top w-100 img-fluid"
+                    <div
+                      className="card"
+                      style={{ width: "18rem", backgroundColor: "black" }}
+                    >
+                      <img
+                        className="card-img-top w-100 img-fluid"
                         src={song.album.images[0].url}
                         alt="imagen"
                         height={song.album.images[1].height}
@@ -127,22 +130,31 @@ export const Api = () => {
                         style={{ margin: "0,2%" }}
                       />
                       <div className="card-body">
-                        <h5 className="p-Api-songName card-title" key={song.id}>{song.name}</h5>
-                        <p className="card-text">Collab: {song.artists[1]? song.artists[1].name  : 'No'}</p>
-                        <p className="card-text">Popularity: {song.popularity}</p>
-                        <p className="card-text">Release date: {song.album.release_date}</p>
+                        <h5 className="p-Api-songName card-title" key={song.id}>
+                          {song.name}
+                        </h5>
+                        <p className="card-text">
+                          Collab:{" "}
+                          {song.artists[1] ? song.artists[1].name : "No"}
+                        </p>
+                        <p className="card-text">
+                          Popularity: {song.popularity}
+                        </p>
+                        <p className="card-text">
+                          Release date: {song.album.release_date}
+                        </p>
                         {song.preview_url ? (
-                        <>
-                          <iframe
-                            src={song.preview_url}
-                            style={{ width: "100%", marginLeft: "17.5%" }}
-                          ></iframe>{" "}
-                        </>
-                      ) : (
-                        <>
-                          <p>{`${song.name} no cuenta con vista previa`}</p>
-                        </>
-                      )}
+                          <>
+                            <iframe
+                              src={song.preview_url}
+                              style={{ width: "100%", marginLeft: "17.5%" }}
+                            ></iframe>{" "}
+                          </>
+                        ) : (
+                          <>
+                            <p>{`${song.name} no cuenta con vista previa`}</p>
+                          </>
+                        )}
                       </div>
                     </div>
                   </>

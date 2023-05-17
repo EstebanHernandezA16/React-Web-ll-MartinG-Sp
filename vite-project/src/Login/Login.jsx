@@ -13,6 +13,19 @@ export const Login = () => {
 
   const handleSubmit = (values, helpers) => {
     console.log(values);
+
+    const MostrarAlert = () => {
+      Swal.fire({
+        title: "mmm",
+        text: "Testeo",
+        icon: "info",
+        iconColor: "cyan",
+        timer: 3000,
+        showCancelButton: true,
+        confirmButtonText: "End",
+      });
+    };
+    MostrarAlert();
   };
   //   const MostrarAlert = () => {
   //     Swal.fire({
@@ -144,6 +157,7 @@ export const Login = () => {
                 <button className="btn btn-light txtbox" type="submit">
                   Submit
                 </button>
+                {/* <p>{JSON.stringify(props.values)}</p> llevar los datos cuando se haga submit al form */}
                 <button className="btn btn-warning txtbox" type="submit">
                   Reset
                 </button>
