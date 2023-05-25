@@ -4,7 +4,7 @@
     height: calc(100% + 5%);
    
     margin: 2.5%;
-    background-color: black;
+    background-color: rgb(15, 16, 17);
     background-size: cover;
 
 }
@@ -36,4 +36,9 @@
 }
 .row-Api{
     top: 20%;
+}
+.card-Api{
+
+    width: 20rem;
+    background-color: rgb(0, 0, 0);
 }

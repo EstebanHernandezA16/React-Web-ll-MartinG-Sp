@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import "./Api.css";
 import { ClientId, ClientL, GrxId } from "../Global/Global";
+import {  StarFill,StarHalf } from "react-bootstrap-icons";
 /*
 *Peticiones con Token, primero se verifica que necesito para hacer la peticion y recibir el token,
  ahora en react al momento de hacer el fetch es importante controlar que no se actualice a cada rato el token, para ello se debe sacar el tiempo de expiracion del token y hacer un condicional para que solo se actualice cuando el tiempo se expire
@@ -9,14 +10,18 @@ import { ClientId, ClientL, GrxId } from "../Global/Global";
 */
 export const Api = () => {
   const [token, setToken] = useState(null);
+  const [artistQuery, setArtistQuery]=useState('Martin Garrix');
   const [tokenExpiration, setTokenExpiration] = useState("");
   const [tokenAlert, setTokenAlert] = useState(true);
   const [songs, setSongs] = useState([]);
   const songsCuantity = 10;
-  const ArtistId = { GrxId }.GrxId;
+  const [artistId, setArtistId]= useState(GrxId)
+  
   /*{"CO","Colombia"},*/
   const countryCode = "CO";
   const sptfEndpoint = "https://accounts.spotify.com/api/token";
+
+  /*Procedimiento, puedo dejar el use effect para que solo cuando se expire el token me lo actualice, ahora la peticion de las canciones deben cambiar en una funcion */
 
   useEffect(() => {
     const fetchToken = async () => {
@@ -45,7 +50,7 @@ export const Api = () => {
     if (token !== null) {
       const fetchSongs = async () => {
         const response = await fetch(
-          `https://api.spotify.com/v1/artists/${ArtistId}/top-tracks?market=${countryCode}`,
+          `https://api.spotify.com/v1/artists/${artistId}/top-tracks?market=${countryCode}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -62,20 +67,77 @@ export const Api = () => {
     }
   }, [tokenExpiration]);
 
+  const fetchArtist = async() =>{
+    try {
+     const uri = `https://api.spotify.com/v1/search?q=${artistQuery}&type=artist&limit=1`
+      const response = await fetch(uri,{
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
+      const data = await response.json();
+      
+      //data.artists.items[0].id
+      setArtistId(data.artists.items[0].id)
+      console.log(artistId);
+      
+      
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
+  const handleArtistChange = (event) =>{
+    setArtistQuery(event.target.value)
+  }
+
+  
+
+
   if (tokenAlert && token != null) {
     console.log("Nuevo token : " + token);
     setTokenAlert(false);
     // setTimeout(fetchSongs, 4000)
   }
 
+  const getStarRating = (rating) =>{
+    //Max [100 =5*], [90=4,5*], [80 =4*], [70=3,5*] [60=3*],[50=2,5*], [40=2*],[30=1,5*], [20=1*]
+    if(rating<=100 && rating>90){
+      return(<><StarFill/><StarFill/><StarFill/><StarFill/><StarFill/></>)
+    }else if(rating<=90 && rating >80){
+      return(<><StarFill/><StarFill/><StarFill/><StarFill/><StarHalf/></>)
+    }else if (rating<=80 && rating>70){
+      return(<><StarFill/><StarFill/><StarFill/><StarFill/></>)
+    }else if (rating<=70 && rating>60){
+      return(<><StarFill/><StarFill/><StarFill/><StarHalf/></>)
+    }else if (rating<=60 && rating>50){
+      return(<><StarFill/><StarFill/><StarFill/></>)
+    }else if (rating<=50 && rating>40){
+      return(<><StarFill/><StarFill/><StarHalf/></>)
+    }else if (rating<=40 && rating>30){
+      return(<><StarFill/><StarFill/></>)
+    }else if(rating<=30 && rating>20){
+      return(<><StarFill/><StarHalf/></>)
+    }else if(rating<=20 && rating>10){
+      return(<><StarFill/></>)
+    }else if (rating<=10 && rating>0){
+      return(<><StarHalf/></>)
+    }
+    
+  }
+
   return (
     <Fragment>
       <div className="container-api">
         <h1>Component Api</h1>
-        <h3 className="h3-Api">Your Personal access token of Spotify</h3>
+        {/* <h3 className="h3-Api">Your Personal access token of Spotify</h3>
         <p className="p-Api" style={{ textAlign: "center" }}>
           {token}
-        </p>
+        </p> */}
+        <h2>You can look for other artists, try it!!!</h2>
+        <input type="text" value={artistQuery} onChange={handleArtistChange}/>
+        <button onClick={fetchArtist}>Search Artist</button>
+
         <div className="row row-Api">
           {songs.map((song, i) => {
             return (
@@ -118,8 +180,8 @@ export const Api = () => {
               {song.preview_url? <><iframe src={song.preview_url} style={{width: '100%', marginLeft: '17.5%'}}></iframe> </> :<><p className="info-text">{`${song.name} no cuenta con vista previa`}</p></>}
               </div> */}
                     <div
-                      className="card"
-                      style={{ width: "18rem", backgroundColor: "black" }}
+                      className="card card-Api"
+                      
                     >
                       <img
                         className="card-img-top w-100 img-fluid"
@@ -127,7 +189,7 @@ export const Api = () => {
                         alt="imagen"
                         height={song.album.images[1].height}
                         width={song.album.images[1].width}
-                        style={{ margin: "0,2%" }}
+                        style={{ margin: "0,2%", marginTop: "2vh" }}
                       />
                       <div className="card-body">
                         <h5 className="p-Api-songName card-title" key={song.id}>
@@ -138,21 +200,25 @@ export const Api = () => {
                           {song.artists[1] ? song.artists[1].name : "No"}
                         </p>
                         <p className="card-text">
-                          Popularity: {song.popularity}
+                          {/* Popularity: {song.popularity} */}
+                          Popularity: {getStarRating(song.popularity)}
+
+                          
                         </p>
                         <p className="card-text">
                           Release date: {song.album.release_date}
                         </p>
                         {song.preview_url ? (
-                          <>
+                          <div className="card-text">
                             <iframe
                               src={song.preview_url}
-                              style={{ width: "100%", marginLeft: "17.5%" }}
-                            ></iframe>{" "}
-                          </>
+                              style={{ width: "100%" }}
+                              />
+                            
+                          </div>
                         ) : (
                           <>
-                            <p>{`${song.name} no cuenta con vista previa`}</p>
+                            <p style={{marginTop: '10vh'}}>{`${song.name} no cuenta con vista previa`}</p>
                           </>
                         )}
                       </div>
