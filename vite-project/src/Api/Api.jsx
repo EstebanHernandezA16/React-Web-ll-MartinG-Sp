@@ -10,12 +10,12 @@ import {  StarFill,StarHalf } from "react-bootstrap-icons";
 */
 export const Api = () => {
   const [token, setToken] = useState(null);
-  const [artistQuery, setArtistQuery]=useState('Martin Garrix');
+  const [artistQuery, setArtistQuery]=useState(null);
   const [tokenExpiration, setTokenExpiration] = useState("");
   const [tokenAlert, setTokenAlert] = useState(true);
   const [songs, setSongs] = useState([]);
   const songsCuantity = 10;
-  const [artistId, setArtistId]= useState(GrxId)
+  const [artistId, setArtistId]= useState(null)
   
   /*{"CO","Colombia"},*/
   const countryCode = "CO";
@@ -48,20 +48,7 @@ export const Api = () => {
     }
 
     if (token !== null) {
-      const fetchSongs = async () => {
-        const response = await fetch(
-          `https://api.spotify.com/v1/artists/${artistId}/top-tracks?market=${countryCode}`,
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
-
-        const data = await response.json();
-        setSongs(data.tracks.slice(0, songsCuantity));
-        console.log(songs);
-      };
+    
 
       fetchSongs();
     }
@@ -80,12 +67,28 @@ export const Api = () => {
       //data.artists.items[0].id
       setArtistId(data.artists.items[0].id)
       console.log(artistId);
+      fetchSongs();
       
       
     } catch (error) {
       console.log(error.message);
     }
   }
+
+  const fetchSongs = async () => {
+    const response = await fetch(
+      `https://api.spotify.com/v1/artists/${artistId}/top-tracks?market=${countryCode}`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+
+    const data = await response.json();
+    setSongs(data.tracks.slice(0, songsCuantity));
+    console.log(songs);
+  };
 
   const handleArtistChange = (event) =>{
     setArtistQuery(event.target.value)
@@ -134,9 +137,11 @@ export const Api = () => {
         <p className="p-Api" style={{ textAlign: "center" }}>
           {token}
         </p> */}
-        <h2>You can look for other artists, try it!!!</h2>
-        <input type="text" value={artistQuery} onChange={handleArtistChange}/>
-        <button onClick={fetchArtist}>Search Artist</button>
+        <h2 style={{marginLeft:'40vh'}}>You can look for other artists, try it!!!</h2>
+        <div className="input-group mb-3" style={{width:'70vh', justifyContent: 'center', alignItems: 'center', marginLeft: '60vh'}}>
+        <input type="text" className="form-control" style={{height: '5vh', justifyContent: 'center', alignItems: 'center'}} value={artistQuery} onChange={handleArtistChange}/>
+        <button className="btn btn-outline-secondary" style={{alignItems: 'center', marginTop:'7vh'}} onClick={fetchArtist}>Search Artist</button>
+        </div>
 
         <div className="row row-Api">
           {songs.map((song, i) => {
